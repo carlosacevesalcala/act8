@@ -15,12 +15,15 @@ void Laboratorio::agregaralfinal(const Computadora &c){
 }
 
 void Laboratorio::mostrar(){
-    for(size_t i = 0; i<5; i++){
-        cout<<"La marca es: "<<arreglo[i].getmarca()<<endl;
-        cout<<"El sistema operativo es: "<<arreglo[i].getso()<<endl;
-        cout<<"La cantidad de ram es: "<<arreglo[i].getram()<<"gb"<<endl;
-        cout<<"La cantidad de almacenamiento es: "<<arreglo[i].gethdd()<<"gb"<<endl;
-        cout<<endl;
+    cout<<left;
+    cout<<setw(10)<<"marca";
+    cout<<setw(20)<<"sistema operativo";
+    cout<<setw(10)<<"ram";
+    cout<<setw(10)<<"almacenamiento";
+    cout<<endl;
+    for(size_t i = 0; i<cont; i++){
+        Computadora &c = arreglo[i];
+        cout<<c;
 
     }
 }

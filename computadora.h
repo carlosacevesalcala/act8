@@ -2,6 +2,7 @@
 #define COMPUTADORA_H
 
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
@@ -22,6 +23,35 @@ public:
     int getram();
     void sethdd(int v);
     int gethdd();
-};
+
+    friend ostream& operator<<(ostream &out, const Computadora &c)
+    {
+        out<<left;
+        out<<setw(10)<<c.marca;
+        out<<setw(20)<<c.so;
+        out<<setw(10)<<c.ram;
+        out<<setw(10)<<c.hdd;
+        out<<endl;
+        return out;
+    }
+
+    friend istream& operator>>(istream &in, Computadora &c)
+    {
+        //string temp;
+        //int ram;
+        //int hdd;
+
+        cout<<"marca: ";
+        getline(cin, c.marca);
+        cout<<"sistema operativo: ";
+        getline(cin, c.so);
+        cout<<"ram: ";
+        cin>>c.ram;
+        cout<<"almacenamiento: ";
+        cin>>c.hdd;
+        return in;
+    }
+    
+    };
 
 #endif

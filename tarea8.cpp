@@ -21,8 +21,12 @@ int main(){
 
     l1.agregaralfinal(c1);
     l1.agregaralfinal(c2);
+    
+    //cout << c1;
+    Computadora c3;
+    cin>>c3;
+    l1 << c3;
     l1.mostrar();
-
 
     return 0;
 }

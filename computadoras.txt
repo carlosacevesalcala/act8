@@ -1,0 +1,12 @@
+acer
+windows
+8
+1000
+hp
+windows
+12
+2000
+hp
+windows
+16
+1000

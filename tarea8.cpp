@@ -4,7 +4,7 @@
 using namespace std;
 
 int main(){
-
+    Laboratorio l2;
     Laboratorio l1;
     Computadora c1;
     Computadora c2;
@@ -27,6 +27,11 @@ int main(){
     cin>>c3;
     l1 << c3;
     l1.mostrar();
+    l1.respaldar_tabla();
+    l1.respaldar();
+    
+    l2.recuperar();
+    l2.mostrar();
 
     return 0;
 }
